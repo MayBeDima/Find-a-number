@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChooseTheNumber</title>
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/animation.css">
+  <script type="module" src="script.js"></script>
+</head>
+
+<body>
+  <div class="game-box">
+
+    <div class="main-container">
+      <div class="start-page page">
+        <div class="start-header header flex">
+          <h1>Найди число</h1>
+          <p>Тренажер на внимание</p>
+        </div>
+        <div class="start-information flex">
+          <h2>Тренирует:</h2>
+          <div class="start-description">
+            <div class="start-description-item note">
+              <h3>Произвольное внимание</h3>
+              <span>Научитесь концентрировать внимание только на важном</span>
+            </div>
+            <div class="start-description-item concentration">
+              <h3>Концентрацию и переключение внимания</h3>
+              <span>Позволит не упускать из вижу важные детали</span>
+            </div>
+            <div class="start-description-item visual">
+              <h3>Зрительное восприятие</h3>
+              <span>Сможете быстро находить основные мысли в текстах</span>
+            </div>
+          </div>
+        </div>
+        <button class="btn start-btn">
+          Далее
+        </button>
+      </div>
+
+      <div class="training-page page none">
+        <div class="training-header header flex">
+          <div class="training-description flex">
+            <p>Найдите указанное число</p>
+            <span>73</span>
+          </div>
+        </div>
+        <div class="training-illustration flex">
+          <ul class="training-field">
+            <li class="training-item flex"><span>73</span></li>
+            <li class="training-item flex"><span>28</span></li>
+            <li class="training-item flex"><span>105</span></li>
+            <li class="training-item flex"><span>11</span></li>
+            <li class="training-item flex"><span>53</span></li>
+            <li class="training-item flex"><span>16</span></li>
+          </ul>
+          <div class="training-cursor">
+            <!-- style.css -->
+          </div>
+        </div>
+        <div class="training-footer flex">
+          <p>
+            Нажмите на игровое поле для продолжения
+          </p>
+        </div>
+      </div>
+
+      <div class="pregame-timer-page page flex none">
+        <div class="pregame-timer flex">
+          <!-- Value from JS -->
+        </div>
+      </div>
+
+      <div class="game-page page none">
+        <div class="game-info flex">
+          <div class="timer-block block-info">
+            Время: <span class="timer">
+              <!-- from JS -->
+            </span>
+          </div>
+          <div class="level-block block-info">
+            Уровень: <span class="level">1</span>
+          </div>
+          <div class="points-block block-info">
+            Очки: <span class="points">0</span>
+          </div>
+          <div class="bonus-block block-info">
+            Бонус: х <span class="bonus">1</span>
+          </div>
+        </div>
+        <div class="game-header flex">
+          <p class="game-header_descr">Найдите число</p>
+          <div class="initial-num-block flex">
+            <span class="initial-num num"></span>
+          </div>
+        </div>
+        <div class="game-field">
+          <ul class="cards">
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="result-game-page page none">
+        <div class="result-header header flex">
+          <p>Ваши результаты</p>
+        </div>
+        <div class="result-information flex">
+          <div class="result-description">
+            <div class="result-description-item flex">
+              <p>Текущий результат</p>
+              <span class="current-result">
+                1
+                <!-- from JS -->
+              </span>
+            </div>
+            <div class="result-description-item flex">
+              <p>Верных ответов</p>
+              <span class="right-answers">
+                1
+                <!-- from JS -->
+              </span>
+            </div>
+            <div class="result-description-item flex">
+              <p>Точность ответов</p>
+              <span class="answers-accuracy">
+                1
+                <!-- from JS -->
+              </span>
+            </div>
+          </div>
+        </div>
+        <button class="btn result-btn">
+          Далее
+        </button>
+      </div>
+
+      <div class="result-alltime-page page none">
+        <div class="result-header header flex">
+          <p>Лучшие результаты</p>
+        </div>
+        <div class="result-information flex">
+          <div class="result-description result-description-alltime">
+            <div class="result-description-item result-description-item-alltime flex">
+              <p>Текущий результат</p>
+              <span class="current-result">
+                <!-- from JS -->
+              </span>
+            </div>
+            <h3>4 лучших результата</h3>
+            <ul class="best-result-list flex">
+              <!-- from JS -->
+            </ul>
+          </div>
+        </div>
+        <div class="result-alltime-btn-container">
+          <button class="btn btn-play-again">
+            Играть еще раз
+          </button>
+          <button class="btn btn-to-all-game" disabled>
+            К списку тренажеров
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-controls flex">
+      <div class="btn-block">
+        <button class="round-btn problems-btn btn"></button>
+        <button class="round-btn sound-btn btn"></button>
+        <button class="round-btn rules-btn btn"></button>
+      </div>
+    </div>
+
+    <div class="right-answer answer none">
+      <!-- in css/js -->
+    </div>
+    <div class="wrong-answer answer none">
+      <!-- in css/js -->
+    </div>
+
+    <div class="problems control-page flex none">
+      <button class="close-problem-btn close-window-btn btn">Продолжить</button>
+      <form action="post" class="flex problems-form">
+        <h2>Сообщите о проблеме</h2>
+        <input type="email" placeholder="Введите email">
+        <textarea name="problem" cols="40" rows="15" placeholder="Введите текст"></textarea>
+        <button type="submit" disabled class="btn">Отправить</button>
+      </form>
+    </div>
+
+    <div class="rules control-page flex none">
+      <button class="close-rules-btn close-window-btn btn">Продолжить</button>
+      <div class="flex rules-block">
+        <h2>Правила игры</h2>
+        <ul>
+          <li>Игра состоит из девяти уровней сложности</li>
+          <li>За правильный ответ начисляются баллы</li>
+          <li>За неправильный ответ баллы списываются в двойном размере</li>
+          <li>Чем больше правильных ответов подряд, тем большее количество бонусов</li>
+          <li>Главное правило игры - хорошее настроение!</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

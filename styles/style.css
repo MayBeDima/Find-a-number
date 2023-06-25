@@ -1,0 +1,495 @@
+/* Common styles */
+
+:root {
+  --colorBackMain: rgba(32, 59, 59, .7);
+  ;
+  --colorBackSecondary: rgba(32, 59, 59, .9);
+  ;
+  --colorBtnMain: rgb(80, 224, 80);
+  --colorFontMain: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--colorFontMain);
+}
+
+li, ol {
+  list-style-type: none;
+}
+
+.btn {
+  width: max-content;
+  padding: 10px 20px;
+  border: 2px var(--colorBtnMain) solid;
+  border-radius: 20px;
+  background: var(--colorBackMain);
+  color: var(--colorBtnMain);
+  font-weight: bold;
+}
+
+.btn:disabled {
+  border: 2px grey solid;
+  background: var(--colorBackMain);
+  color: grey;
+  font-weight: bold;
+}
+
+.btn:disabled:hover {
+  background: var(--colorBackMain);
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: var(--colorFontMain);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  padding-top: 50px;
+  background: #cecece;
+}
+
+/* Styles for main blocks */
+
+.game-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 700px;
+  height: 500px;
+  background: url(../assets/mainBack.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main-container {
+  height: 100%;
+}
+
+.page {
+  height: 100%;
+}
+
+/* Styles for answers check */
+.answer {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: calc(50% - 50px);
+  left: calc(50% - 75px);
+  background-color: aqua;
+}
+
+.right-answer {
+  background: url(../assets/truth.png);
+}
+
+.wrong-answer {
+  background: url(../assets/error.png);
+}
+
+/* Styles for game-page */
+/* Main blocks */
+.game-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-info {
+  justify-content: end;
+  width: 100%;
+  height: 50px;
+  background: var(--colorBackMain);
+}
+
+.game-header {
+  width: 100%;
+  min-height: 90px;
+  background: var(--colorBackSecondary);
+}
+
+.game-header_descr {
+  margin-right: 50px;
+}
+
+.game-field {
+  width: 100%;
+  height: 100%;
+  padding: 20px 50px;
+}
+
+.game-controls {
+  width: 100%;
+  min-height: 50px;
+  background: var(--colorBackMain);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  min-height: 130px;
+}
+
+/* Styles for game-page */
+/* Common styles for blocks */
+
+.num {
+  color: white;
+  font-size: 25px;
+}
+
+/* Styles for game-page */
+/* Styles for game info*/
+.block-info {
+  margin-right: 20px;
+}
+
+/* Styles for game-page */
+/* Styles for game header*/
+.initial-num-block {
+  width: 100px;
+  height: 60%;
+  background: orange;
+}
+
+.initial-num {
+  font-size: 35px;
+}
+
+/* Styles for game-page */
+/* Styles for game field */
+
+.cards {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.cards_item {
+  cursor: pointer;
+}
+
+.cards_item:active {
+  box-shadow: 0 0 10px var(--colorBtnMain);
+}
+
+/* Styles for start-page */
+/* Main blocks */
+
+.start-header {
+  flex-direction: column;
+  background: url(../assets/headerBack.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.start-information {
+  flex-direction: column;
+}
+
+.start-information h2 {
+  margin-bottom: 10px;
+}
+
+.start-description {
+  margin-bottom: 10px;
+  padding: 30px 30px 30px 60px;
+  background: var(--colorBackMain);
+  border-radius: 30px;
+}
+
+.start-description-item {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.start-description-item::before {
+  position: absolute;
+  left: -40px;
+  top: 7px;
+}
+
+.note::before {
+  content: url(../assets/noteEye.svg);
+}
+
+.concentration::before {
+  content: url(../assets/conсentrationEye.svg);
+}
+
+.visual::before {
+  content: url(../assets/visualEye.svg);
+}
+
+.start-btn {
+  margin: 0 auto;
+}
+
+/* Styles for training-page */
+/* Main blocks */
+
+.training-header {
+  flex-direction: column;
+}
+
+.training-description {
+  justify-content: space-between;
+  width: 50%;
+  padding: 20px;
+  background: var(--colorBackMain);
+}
+
+.training-description span {
+  font-size: 30px;
+}
+
+.training-illustration {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.training-field {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+  width: 70%;
+  height: 250px;
+  cursor: pointer;
+}
+
+.training-item {
+  background: var(--colorBackSecondary);
+}
+
+.training-item span {
+  font-size: 40px;
+}
+
+@keyframes cursor-position {
+  from {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: translate(-150px, -100px) scale(1);
+  }
+
+  75% {
+    transform: translate(-150px, -100px) scale(.7);
+  }
+
+  to {
+    transform: translate(-150px, -100px) scale(1);
+  }
+}
+
+.training-cursor {
+  position: absolute;
+  bottom: 0;
+  width: 90px;
+  height: 100px;
+  background: url(../assets/arm.svg);
+  background-repeat: no-repeat;
+  animation: cursor-position 3s infinite;
+}
+
+/* Styles for pregame timer */
+
+.pregame-timer {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--colorBackSecondary);
+  font-size: 80px;
+}
+
+/* Styles for result-game page */
+
+.result-header {
+  background: var(--colorBackMain);
+  font-size: 50px;
+}
+
+.result-description {
+  margin: 40px 0;
+  padding: 30px;
+  background: var(--colorBackSecondary);
+}
+
+.result-description-item {
+  width: 300px;
+  justify-content: space-between;
+}
+
+.result-description-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.result-btn {
+  margin: 0 auto;
+}
+
+/* Styles for result-alltime-game page */
+
+.result-description-alltime {
+  margin: 20px 0;
+  padding: 20px;
+}
+
+.result-description-alltime h3 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.result-description-item-alltime:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.result-alltime-btn-container {
+  margin: 0 auto;
+}
+
+.best-result-list {
+  flex-direction: column;
+}
+
+.btn-to-all-game {
+  background: var(--colorBtnMain);
+  color: var(--colorFontMain);
+}
+
+/* Styles for controls page */
+
+.btn-block {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.round-btn {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border: 2px var(--colorBtnMain) solid;
+  border-radius: 50%;
+}
+
+.round-btn::after {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.problems-btn::after {
+  background-image: url(../assets/info.png);
+}
+
+.sound-btn::after {
+  background-image: url(../assets/sound.png);
+}
+
+.rules-btn::after {
+  background-image: url(../assets/question.png);
+}
+
+.round-btn::before {
+  position: absolute;
+  right: 40px;
+  top: 2px;
+  display: none;
+  width: max-content;
+  padding: 5px;
+  border: 2px rgb(80, 224, 80) solid;
+  border-radius: 3px;
+  background: grey;
+}
+
+.problems-btn::before {
+  content: 'Сообщить о проблеме';
+}
+
+.sound-btn::before {
+  content: 'Включить/выключить звук';
+}
+
+.mute {
+  background: rgba(255, 0, 0, 0.6);
+}
+
+.rules-btn::before {
+  content: 'Правила игры';
+}
+
+.round-btn:hover::before {
+  display: block;
+}
+
+/* Problems page */
+.control-page {
+  position: absolute;
+  inset: 0;
+  background: #5a5a5a;
+}
+
+.problems-form {
+  flex-direction: column;
+}
+
+.problems-form textarea, input {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border: 2px var(--colorBtnMain) solid;
+  border-radius: 20px;
+  background: var(--colorBackMain);
+  color: var(--colorBtnMain);
+  font-weight: bold;
+
+}
+
+.problems-form input {
+  width: max-content;
+  margin: 20px;
+}
+
+.problems-form textarea {
+  resize: none;
+}
+
+.close-window-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+/* Rules page */
+
+.rules-block {
+  flex-direction: column;
+}
+
+.rules-block li {
+  margin-bottom: 10px;
+}
+
+/* Common style for display:none */
+.none {
+  display: none;
+}
