@@ -3,7 +3,7 @@ export const soundMode = {
 
   setSound(src) {
     var audio = new Audio();
-    audio.src = src;
+    audio.src = `${src}`;
     audio.autoplay = true;
   },
 
