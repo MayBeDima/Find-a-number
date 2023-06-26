@@ -2,9 +2,8 @@ export const soundMode = {
   mute: false,
 
   setSound(src) {
-    var audio = new Audio();
-    audio.src = `${src}`;
-    audio.autoplay = true;
+    let audio = new Audio(src);
+    audio.play();
   },
 
   clickSound() {
