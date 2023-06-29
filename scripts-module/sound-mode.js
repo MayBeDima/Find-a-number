@@ -8,7 +8,7 @@ export const soundMode = {
 
   clickSound() {
     if (!this.mute) this.setSound('assets/sounds/mouseClick.mp3');
-  },
+  }, 
 
   timerSound() {
     if (!this.mute) this.setSound('assets/sounds/timer.mp3');
